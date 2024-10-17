@@ -1,0 +1,11 @@
+
+
+USE UMG;
+
+
+CREATE TABLE direccion (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    dpi_persona VARCHAR(20),
+    direccion VARCHAR(255),
+    FOREIGN KEY (dpi_persona) REFERENCES persona(ID_PERSONA) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
